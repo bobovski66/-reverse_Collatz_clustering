@@ -62,7 +62,8 @@ By studying these towers, we analyze **how different numbers map to each other**
 - Nodes are connected based on their structural similarity after UMAP reduction.
 
 **📌 Explore the interactive KeplerMapper visualizations here:**  
-   ▶️ **[Collatz Mapper Interface](mapper_outputs/index.html)**
+▶️ **[Collatz Mapper Interface](https://your-username.github.io/your-repo/mapper_outputs/index.html)**
+
 
 ## Conclusion
 - **Towers in the Collatz process exhibit structured connectivity**, influenced by **2-adic valuations and mod-3 residues**.
