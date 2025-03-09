@@ -41,28 +41,33 @@ By studying these towers, we analyze **how different numbers map to each other**
    - Visualize clustering properties to see how local connections form.
 
 ## Results & Visualizations
-### **1️⃣ Backward Step Graph of Collatz Towers**
+### **4️⃣ KeplerMapper Graph for d=7, n_neighbors=30**
+![Mapper Graph](image.png)
+- This visualization represents the **topological structure** of the Collatz backward graph, mapped using KeplerMapper.
+- **UMAP dimensionality reduction** is applied to preserve meaningful distances between points in high-dimensional space.
+- **Nodes represent clusters of numbers** that are structurally similar in their backward trajectories.
+- **Edges indicate topological overlap** between clusters, showing where numbers share common paths in their preimages.
+- The formation of **distinct connected components** suggests the existence of hierarchical relationships between certain numbers in the Collatz process.
+- The largest, highly connected clusters correspond to **attractors**—numbers that accumulate many preimage mappings.
+- **Sparse and isolated nodes** indicate numbers with fewer backward connections, meaning they originate from more constrained trajectories.
+
+**📌 Explore the interactive KeplerMapper visualizations here:**  
+▶️ **[Collatz Mapper Interface](https://bobovski66.github.io/reverse_Collatz_clustering/mapper_outputs/index.html)**
+
+### **Backward Step Graph of Collatz Towers**
 ![Backward Step Graph](output22.png)
 - Each node represents a number in the Collatz process, color-coded by mod-3 class.
 - Directed edges indicate valid backward steps, revealing hierarchical structures.
 
-### **2️⃣ PCA-Based Clustering of Collatz Mapper Graphs**
+### **PCA-Based Clustering of Collatz Mapper Graphs**
 ![PCA Clustering](output24.png)
 - Principal Component Analysis (PCA) reveals how different Mapper graphs separate in feature space.
 - Three distinct clusters emerge, corresponding to different levels of connectivity and structure.
 
-### **3️⃣ Visualization of Most & Least Clustered Nodes in Collatz Backward Graph**
+### **Visualization of Most & Least Clustered Nodes in Collatz Backward Graph**
 ![Clustered Nodes](output25.png)
 - **Red nodes**: Most clustered, forming highly connected hubs.
 - **Blue nodes**: Least clustered, sparse and isolated numbers.
-
-### **4️⃣ KeplerMapper Graph for d=7, n_neighbors=30**
-![Mapper Graph](image.png)
-- A complex topology emerges, showing distinct substructures in the Collatz backward graph.
-- Nodes are connected based on their structural similarity after UMAP reduction.
-
-**📌 Explore the interactive KeplerMapper visualizations here:**  
-▶️ **[Collatz Mapper Interface](https://your-username.github.io/your-repo/mapper_outputs/index.html)**
 
 
 ## Conclusion
