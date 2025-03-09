@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collatz Mapper Visualizations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #4caf50;
+        }
+        label {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        select {
+            background-color: #333;
+            color: #ffffff;
+            border: 1px solid #4caf50;
+            padding: 5px;
+            font-size: 1em;
+        }
+        #viewer {
+            width: 90%;
+            height: 80vh;
+            border: 2px solid #4caf50;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(76, 175, 80, 0.5);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <h1>Collatz Mapper Visualizations</h1>
+    <label for="visualization">Choose a visualization:</label>
+    <select id="visualization" onchange="updateViewer()">
+        <option value="">-- Select a visualization --</option>
+        <option value="mapper_d2_n5.html">Mapper (d=2, n=5)</option>
+        <option value="mapper_d2_n10.html">Mapper (d=2, n=10)</option>
+        <option value="mapper_d2_n15.html">Mapper (d=2, n=15)</option>
+        <option value="mapper_d2_n30.html">Mapper (d=2, n=30)</option>
+        <option value="mapper_d3_n5.html">Mapper (d=3, n=5)</option>
+        <option value="mapper_d3_n10.html">Mapper (d=3, n=10)</option>
+        <option value="mapper_d3_n15.html">Mapper (d=3, n=15)</option>
+        <option value="mapper_d3_n30.html">Mapper (d=3, n=30)</option>
+        <option value="mapper_d5_n5.html">Mapper (d=5, n=5)</option>
+        <option value="mapper_d5_n10.html">Mapper (d=5, n=10)</option>
+        <option value="mapper_d5_n15.html">Mapper (d=5, n=15)</option>
+        <option value="mapper_d5_n30.html">Mapper (d=5, n=30)</option>
+        <option value="mapper_d7_n5.html">Mapper (d=7, n=5)</option>
+        <option value="mapper_d7_n10.html">Mapper (d=7, n=10)</option>
+        <option value="mapper_d7_n15.html">Mapper (d=7, n=15)</option>
+        <option value="mapper_d7_n30.html">Mapper (d=7, n=30)</option>
+    </select>
+    
+    <iframe id="viewer" src="" frameborder="0"></iframe>
+
+    <script>
+        function updateViewer() {
+            var selection = document.getElementById("visualization").value;
+            var viewer = document.getElementById("viewer");
+            if (selection) {
+                viewer.src = selection;
+            } else {
+                viewer.src = "";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>Collatz Towers - Interactive Topological Data Analysis</p>
+    </footer>
+</body>
+</html>
